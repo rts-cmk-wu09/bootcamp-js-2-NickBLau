@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<link rel="stylesheet" href="./css/style.css">
 	<style>
 		h1 {
 	font-family: var(--font-secondaryFamily);}
@@ -163,5 +162,17 @@ main {
 			</ul>
 		</section>
 	</footer>
+	<script>
+		function cssloader(src){
+			const stylesheet = document.createElement("link")
+			stylesheet.href = src 
+			stylesheet.rel = "stylesheet"
+			document.getElementsByTagName("head")[0].appendChild(stylesheet)
+		}
+
+		document.addEventListener("DOMContentLoaded", function(){
+			cssloader("/css/style.css")
+		})
+	</script>
 </body>
 </html>
